@@ -49,4 +49,9 @@ class MainActivity : AppCompatActivity() {
     fun startRecording() {
         voiceRecordManager.startListening()
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        voiceRecordManager.cleanUp()
+    }
 }

@@ -32,6 +32,14 @@ class VoiceRecordManager(private val context: Context, private val resultsReceiv
         mSpeechRecognizer.stopListening()
     }
 
+    fun cleanUp(){
+        if (mSpeechRecognizer != null) {
+            mSpeechRecognizer.stopListening()
+            mSpeechRecognizer.cancel()
+            mSpeechRecognizer.destroy()
+        }
+    }
+
     interface ResultsReceiveListener{
         fun onResultsReceived(results : ArrayList<String>)
     }
