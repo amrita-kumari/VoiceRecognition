@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">VoiceRecognition</string>
+    <string name="perm_required">This permission is required in order to record audio.</string>
+</resources>
